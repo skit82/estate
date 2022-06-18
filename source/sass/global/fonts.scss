@@ -11,6 +11,17 @@
 
 @font-face {
   font-style: normal;
+  font-weight: 700;
+  font-family: "Epilogue";
+
+  font-display: swap;
+  src:
+    url("../fonts/epilogue-bold.woff2") format("woff2"),
+    url("../fonts/epilogue-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 400;
   font-family: "Epilogue";
 

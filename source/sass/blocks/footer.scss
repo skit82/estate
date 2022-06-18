@@ -1,5 +1,116 @@
 .footer {
-  padding: 40px 0;
+  padding: 20px 0;
+  background-color: $color-dark-grey;
 
-  background-color: $color-neon-blue;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &--tel a {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 700;
+
+      color: $color-default-white;
+    }
+
+    &--post a {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 700;
+
+      color: $color-default-white;
+    }
+
+    &--office {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 700;
+
+      color: $color-default-white;
+    }
+  }
+
+  &__nav-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: $color-default-white;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__nav-box {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-list {
+    width: 280px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__nav-link {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: $color-default-white;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+
+    color: $color-default-white;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-default-white;
+      margin: 0;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 21px;
+      color: $color-default-white;
+      margin: 0;
+    }
+  }
 }
