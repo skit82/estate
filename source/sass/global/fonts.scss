@@ -30,3 +30,14 @@
     url("../fonts/epilogue-regular.woff2") format("woff2"),
     url("../fonts/epilogue-regular.woff") format("woff");
 }
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Fester";
+
+  font-display: swap;
+  src:
+    url("../fonts/fester_trial-bold.woff2") format("woff2"),
+    url("../fonts/fester_trial-bold.woff") format("woff");
+}

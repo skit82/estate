@@ -1,0 +1,9 @@
+mixin subscribe-form()
+
+  .subscribe-form(data-validate)
+    form(action="#", method="post", data-form="subscribe-form")
+      .subscribe-form__item
+        +custom-input({inputLabel: "Эл. почта", inputType: "email", inputName: "user-email"})(required, autocomplete="off")
+      .subscribe-form__submit
+        +btn({text: "Подписаться", type: "submit"}).btn--yellow
+         p Заполняя эту форму, вы принимаете условия #[a(href="#")  политики конфиденциальности]

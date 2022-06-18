@@ -400,6 +400,14 @@ template {
   src: url("../fonts/epilogue-regular.woff2") format("woff2"), url("../fonts/epilogue-regular.woff") format("woff");
 }
 
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Fester";
+  font-display: swap;
+  src: url("../fonts/fester_trial-bold.woff2") format("woff2"), url("../fonts/fester_trial-bold.woff") format("woff");
+}
+
 *,
 *::before,
 *::after {
@@ -935,6 +943,10 @@ button,
   pointer-events: none;
 }
 
+.btn--yellow {
+  background-color: #ffba08;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
@@ -1390,6 +1402,33 @@ button,
   opacity: 1;
 }
 
+.title {
+  margin: 0;
+  font-family: "Fester", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 130%;
+}
+
+.title--lg {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.subscribe__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subscribe__title {
+  max-width: 698px;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1400,6 +1439,11 @@ button,
 @media (hover: hover), screen and (min-width: 0\0) {
   .btn:hover,
   .btn:focus {
+    opacity: 0.8;
+  }
+
+  .btn--yellow:hover,
+  .btn--yellow:focus {
     opacity: 0.8;
   }
 
@@ -1417,6 +1461,15 @@ button,
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .title--lg {
+    font-size: 30px;
+    line-height: 140%;
   }
 }
 
@@ -1436,5 +1489,15 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 140%;
+  }
+
+  .title--lg {
+    font-size: 26px;
+    line-height: 140%;
   }
 }

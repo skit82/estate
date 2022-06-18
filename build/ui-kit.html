@@ -8,6 +8,7 @@
     <meta name="description" content="Профессиональная оценка вашего имущества">
     <link rel="preload" href="fonts/epilogue-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/epilogue-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/fester_trial-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -189,30 +190,42 @@
             <button class="btn" type="button" disabled>Текст</button>
             <p>Пример вызова</p><code>
               <pre>+btn({text: "Текст"})(disabled)</pre></code>
+            <p>Пример вызова</p><code>
+              <pre>+btn({text: "Заказать", type: "submit", isExternal: true}).btn--yellow</pre></code>
+            <button class="btn btn--yellow" type="submit">Заказать</button>
+          </section>
+          <section id="titles">
+            <h2 class="section-title">Заголовки</h2>
+            <div class="title">Заголовок 1-го уровня</div>
+            <p><code>class="title"</code></p>
+            <div class="title title--lg">Заголовок 2-го уровня крупный</div>
+            <p><code>class="title title--lg"</code></p>
+            <div class="title title--sm">Заголовок 3-го уровня</div>
+            <p><code>class="title title--sm"</code></p>
           </section>
           <section id="form-elements">
             <h2>Form elements</h2>
             <div data-validate>
               <form method="post">
                 <div class="custom-input" data-validate-type="text" data-limitations="name">
-                  <label><span class="custom-input__label">Введите ваше имя</span>
-                    <input type="text" name="user-name" minlength="2">
+                  <label>
+                    <input type="text" name="user-name" minlength="2" data-form="input" data-validate-type="text" data-limitations="name"><span class="custom-input__label" data-form="label">Введите ваше имя</span>
                   </label>
                   <div class="custom-input__error">Не корректное имя</div>
                 </div>
                 <p>Пример вызова</p><code>
                   <pre>+custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
                 <div class="custom-input" data-validate-type="phone">
-                  <label><span class="custom-input__label">Введите ваш телефон</span>
-                    <input type="tel" name="user-phone">
+                  <label>
+                    <input type="tel" name="user-phone" data-form="input" data-validate-type="phone"><span class="custom-input__label" data-form="label">Введите ваш телефон</span>
                   </label>
                   <div class="custom-input__error">Не корректный телефон</div>
                 </div>
                 <p>Пример вызова</p><code>
                   <pre>+custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
                 <div class="custom-input" data-validate-type="email">
-                  <label><span class="custom-input__label">Введите ваш email</span>
-                    <input type="email" name="user-email">
+                  <label>
+                    <input type="email" name="user-email" data-form="input" data-validate-type="email"><span class="custom-input__label" data-form="label">Введите ваш email</span>
                   </label>
                   <div class="custom-input__error">Не корректный email</div>
                 </div>
@@ -225,29 +238,6 @@
                 </div>
                 <p>Пример вызова</p><code>
                   <pre>+custom-textarea({inputLabel: "Расскажите о себе", inputName: "user-info"})</pre></code>
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Выберите тему обращения</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="true" role="option">Тема 1</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Тема 2</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Тема 3</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Тема 4</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Тема 5</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Тема 6</li>
-                  </ul>
-                </div><code>
-                  <pre></pre>+custom-select({error: "Выберите тему обращения", optionsList: [{text: "Тема 1", value: "id-1"}, {text:
-                  "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5",
-                  value: "id-5"}, {text: "Тема 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name",
-                  data-id="id-example").custom-select</code>
-                <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                  <label>
-                    <input type="checkbox" name="user-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Подтвердите своё согласие</span>
-                  </label>
-                  <div class="custom-toggle__error">Согласие является обязательным</div>
-                </div>
-                <p>Пример вызова</p><code>
-                  <pre>+custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
                 <button class="btn" type="reset">Сбросить форму</button>
                 <button class="btn" type="submit">Отправить форму</button>
               </form>

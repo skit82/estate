@@ -1,0 +1,11 @@
+.subscribe {
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__title {
+    max-width: 698px;
+    flex-grow: 0;
+  }
+}

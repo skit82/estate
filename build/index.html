@@ -8,6 +8,7 @@
     <meta name="description" content="Профессиональная оценка вашего имущества">
     <link rel="preload" href="fonts/epilogue-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/epilogue-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/fester_trial-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -78,14 +79,33 @@
         </div>
       </header>
       <main>
-        <div class="intro">
+        <!-- +intro()-->
+        <section class="subscribe">
           <div class="container">
-            <p style="margin-top: 40px;">Текст&nbsp;с&nbsp;мнемониками</p>
-            <p style="margin-top: 40px;">Пример использования +img()</p>
-            <p style="margin-bottom: 40px;"><img src="img/content/placeholder.png" srcset="img/content/placeholder@2x.png 2x" width="120" height="120" alt="Пример">
-            </p>
+            <div class="subscribe__wrapper">
+              <div class="subscribe__title">
+                <h2 class="title title--lg">Получите подробное разъяснение расчётной процедуры бесплатно!</h2>
+                <p>Подпишитесь на рассылку, и файл придет на указанный адрес электронной почты</p>
+              </div>
+              <div class="subscribe__form">
+                <div class="subscribe-form" data-validate>
+                  <form action="#" method="post" data-form="subscribe-form">
+                    <div class="subscribe-form__item">
+                      <div class="custom-input" required autocomplete="off">
+                        <label>
+                          <input type="email" name="user-email" data-form="input" required autocomplete="off"><span class="custom-input__label" data-form="label">Эл. почта</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="subscribe-form__submit">
+                      <button class="btn btn--yellow" type="submit">Подписаться</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container">
