@@ -1,0 +1,8 @@
+mixin socials()
+
+  .socials&attributes(attributes)
+    ul.socials__list
+      each item in socials
+        li.socials__item
+          a.socials__link(href=item.link, aria-label=item.name, target="_blank", rel="nofollow noopener noreferrer")
+            +icon(`icon-${item.name}`, "40","40")

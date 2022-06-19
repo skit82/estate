@@ -1,0 +1,43 @@
+.subscribe-form {
+  max-width: 300px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: $color-default-white;
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.subscribe-form__item {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.subscribe-form__submit {
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  a {
+    color: $color-yellow2;
+    transition: $trans-default;
+    border-bottom: 1px solid $color-yellow2;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:focus,
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

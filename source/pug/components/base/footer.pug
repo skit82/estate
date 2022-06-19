@@ -3,76 +3,82 @@ mixin footer(footerMods)
     .container
       .footer__wrapper
         .footer__inner
-          .footer__logo
-          .footer__section.footer__section--row1
-            .footer__nav
-              .footer__nav-box.footer__nav-box--one
-                p.footer__nav-title Компания
-                ul.footer__nav-list
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") О компании
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Вакансии
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Партнеры
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Сотрудничество
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Отзывы
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Рекомендации
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Контакты
-              .footer__nav-box.footer__nav-box--two
-                p.footer__nav-title Услуги
-                ul.footer__nav-list
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Оценка
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Строительно-техническая экспертиза
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Оценка состояния техники для списания
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Рецензия на отчет об оценке
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Юридическая экспертиза сделки купли-продажи
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Судебная экспертиза
-              .footer__nav-box.footer__nav-box--three
-                p.footer__nav-title Блог
-                ul.footer__nav-list
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Цели оценки
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Объекты оценки
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Отчет об оценке
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Информация
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Новости
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Статьи
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Аналитика
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Оплата и доставка
-                  li.footer__nav-item
-                    a.footer__nav-link(href="#") Договор-оферта
-          .footer__section.footer__section--row2
-            .footer__contact
-              .footer__content.footer__content--tel
-                span.footer__name Бесплатный звонок по России
-                a(href="tel:+88000000000") 8-800-000-00-00,&nbsp;
-                a(href="tel:+74950000000") 7-(495) 000-00-00
-              .footer__content.footer__content--post
-                span.footer__name Вопросы, отзывы и предложения
-                a(href="mailto:ocenka.cool@mai.ru") ocenka.cool@mai.ru
-              .footer__content.footer__content--office
-                span.footer__name Представительства в Москви, Твери, Рязани
-                p Работаем по всей России!
-        .footer__section.footer__section--row3
-          .footer__copyright
-            p © ООО «Ромашка», 2016—2020
-            a(href="#") Политика конфиденциальности
+          .footer__box
+            .footer__logo
+              .footer__logo-picture
+              .footer__order
+                +arrow-btn({href: "#"})
+                span Заказать онлайн
+            .footer__description
+                .footer__section.footer__section--row1
+                  .footer__nav
+                    .footer__nav-box.footer__nav-box--one
+                      p.footer__nav-title Компания
+                      ul.footer__nav-list
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") О компании
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Вакансии
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Партнеры
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Сотрудничество
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Отзывы
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Рекомендации
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Контакты
+                    .footer__nav-box.footer__nav-box--two
+                      p.footer__nav-title Услуги
+                      ul.footer__nav-list
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Оценка
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Строительно-техническая экспертиза
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Оценка состояния техники для списания
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Рецензия на отчет об оценке
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Юридическая экспертиза сделки купли-продажи
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Судебная экспертиза
+                    .footer__nav-box.footer__nav-box--three
+                      p.footer__nav-title Блог
+                      ul.footer__nav-list
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Цели оценки
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Объекты оценки
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Отчет об оценке
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Информация
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Новости
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Статьи
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Аналитика
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Оплата и доставка
+                        li.footer__nav-item
+                          a.footer__nav-link(href="#") Договор-оферта
+                .footer__section.footer__section--row2
+                  .footer__contact
+                    .footer__content.footer__content--tel
+                      span.footer__name Бесплатный звонок по России
+                      a(href="tel:+88000000000") 8-800-000-00-00,&nbsp;
+                      a(href="tel:+74950000000") 8-(495) 000-00-00
+                    .footer__content.footer__content--post
+                      span.footer__name Вопросы, отзывы и предложения
+                      a(href="mailto:ocenka.cool@mai.ru") ocenka.cool@mai.ru
+                      +socials()
+                    .footer__content.footer__content--office
+                      span.footer__name Представительства в Москви, &nbsp;Твери,&nbsp;Рязани
+                      p Работаем по всей России!
+        .footer__copyright
+          p © ООО «Ромашка», 2016—2020
+          a(href="#") Политика конфиденциальности
 

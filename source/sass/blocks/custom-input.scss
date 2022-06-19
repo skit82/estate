@@ -1,65 +1,118 @@
 .custom-input,
 .custom-textarea {
   position: relative;
-
   display: flex;
-  width: 500px;
-  padding: 20px 0;
+
+  width: 100%;
+  min-height: 60px;
+
+  border-radius: 10px;
 
   label {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
+    border: 1px solid $color-grey-chateau2;
+    border-radius: 10px;
+    transition: border-color $trans-default;
+    cursor: text;
 
     input,
     textarea {
+      appearance: none;
       flex-grow: 1;
-      min-height: 40px;
-      margin-left: 30px;
-      padding: 10px;
+      // min-height: 40px;
+      // margin-left: 30px;
+      padding: 0 18px 0 18px;
 
-      border: 2px solid rgba($color-default-black, 0.2);
-      border-radius: 5px;
+      font-size: 16px;
+      line-height: 130%;
+      font-weight: 400;
+      color: $color-dark-grey;
+
+      // border: 2px solid rgba($color-default-black, 0.2);
+      border-radius: 10px;
+      border: none;
       outline: none;
 
       transition: border $trans-default;
 
-      &:hover {
-        border: 2px solid rgba($color-default-black, 0.5);
-      }
+      // &:hover {
+        // border: 2px solid rgba($color-default-black, 0.5);
+      // }
 
-      &:focus {
-        border: 2px solid rgba($color-default-black, 0.8);
+      // &:focus {
+        // border: 2px solid rgba($color-default-black, 0.8);
+      // }
+    }
+  }
+
+  &__label {
+    order: -1;
+    padding-left: 18px;
+    transform: translate3d(0, 20px, 0);
+
+    // font-size: 16px;
+    line-height: 1;
+    // font-weight: 600;
+    // letter-spacing: normal;
+    // color: $color-grey-chateau;
+
+    pointer-events: none;
+    transition: padding-left $trans-default, transform $trans-default, scale $trans-default, color $trans-default;
+
+    @include vp-767 {
+      font-size: 14px;
+      transform: translate3d(0, 16px, 0);
+    }
+
+    &.on-focus {
+      padding-left: 10px;
+      transform: translate3d(0, 8px, 0) scale(0.75);
+
+      @include vp-767 {
+        transform: translate3d(0, 6px, 0) scale(0.75);
       }
     }
   }
 
-  &__error {
+  &__count {
     position: absolute;
-    right: 0;
-    bottom: -5px;
+    bottom: 16px;
+    right: 20px;
 
-    color: $color-torch-red;
-
-    opacity: 0;
-
-    transition: opacity $trans-default;
+    font-size: 12px;
+    line-height: 133%;
+    color: $color-grey-chateau;
   }
 
-  &.is-invalid {
-    input {
-      border: 2px solid $color-torch-red;
+  // &__error {
+    // position: absolute;
+    // right: 0;
+    // bottom: -5px;
 
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-torch-red, 0.5);
-      }
-    }
+    // color: $color-torch-red;
 
-    .custom-input__error {
-      opacity: 1;
-    }
-  }
+    // opacity: 0;
+
+    // transition: opacity $trans-default;
+  // }
+
+  // &.is-invalid {
+    // input {
+      // border: 2px solid $color-torch-red;
+
+      // &:focus,
+      // &:hover {
+        // border: 2px solid rgba($color-torch-red, 0.5);
+      // }
+    // }
+
+    // .custom-input__error {
+      // opacity: 1;
+    // }
+  // }
 
   /*&.is-valid {
     input {

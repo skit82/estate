@@ -1,0 +1,9 @@
+mixin arrow-btn(options = {})
+  - const tag = options.tag ? options.tag : options.href ? "a" : "button";
+  - const href = options.href || false;
+  - const type = options.type || tag === "button" ? options.type || "button" : false;
+  - const target = options.isExternal ? "_blank" : false;
+  - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+
+  #{tag}.btn.btn--round(href=href, target=target, rel=rel, type=type)&attributes(attributes)
+    +icon("icon-arrow-left", 6, 12) !{tag}

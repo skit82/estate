@@ -1,5 +1,6 @@
 .footer {
-  padding: 20px 0;
+  padding-bottom: 30px;
+  padding-top: 60px;
   background-color: $color-dark-grey;
 
   &__inner {
@@ -9,7 +10,7 @@
 
   &__nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
@@ -19,32 +20,83 @@
     flex-wrap: wrap;
   }
 
+  &__box {
+    display: flex;
+  }
+
+  &__logo {
+    max-width: 240px;
+    width: 100%;
+    flex-grow: 0;
+    margin-right: 82px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
 
-    &--tel a {
-      font-size: 20px;
-      line-height: 26px;
-      font-weight: 700;
+    &--tel {
+      max-width: 230px;
+      width: 100%;
+      margin-right: 80px;
 
-      color: $color-default-white;
+      a {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+        color: $color-default-white;
+        transition: $trans-default;
+
+        @media (hover: hover), screen and (min-width: 0\0) {
+          &:focus,
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
     }
 
-    &--post a {
-      font-size: 20px;
-      line-height: 26px;
-      font-weight: 700;
+    &--post {
+      max-width: 263px;
+      width: 100%;
 
-      color: $color-default-white;
+      margin-right: 47px;
+
+      a {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+
+        color: $color-default-white;
+        transition: $trans-default;
+
+        @media (hover: hover), screen and (min-width: 0\0) {
+          &:focus,
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
     }
 
     &--office {
+      max-width: 280px;
+      width: 100%;
+
       font-size: 20px;
       line-height: 26px;
       font-weight: 700;
 
       color: $color-default-white;
+
+      p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+      }
     }
   }
 
@@ -81,8 +133,16 @@
     line-height: 26px;
 
     color: $color-default-white;
+    transition: $trans-default;
     margin: 0;
     margin-bottom: 20px;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:focus,
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 
   &__name {
@@ -110,7 +170,44 @@
       font-size: 16px;
       line-height: 21px;
       color: $color-default-white;
+      transition: $trans-default;
       margin: 0;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:focus,
+        &:hover {
+          opacity: 0.7;
+        }
+      }
     }
+  }
+
+  &__logo-picture {
+    width: 80px;
+    height: 80px;
+
+    background: #FFD159;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+  }
+
+  &__order {
+    display: flex;
+    align-items: center;
+
+    margin-top: 50px;
+
+    span {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+
+      color: $color-default-white;
+      margin-left: 10px;
+    }
+  }
+
+  &__section {
+    margin-bottom: 50px;
   }
 }

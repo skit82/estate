@@ -2,10 +2,35 @@
 
   &__wrapper {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__name {
+    max-width: 698px;
+    // margin-right: 100px;
+    flex-grow: 0;
+
+    p {
+      max-width: 477px;
+      font-size: 18px;
+      line-height: 28px;
+
+      margin: 0;
+    }
+
+    span {
+      color: $color-yellow3;
+    }
   }
 
   &__title {
-    max-width: 698px;
-    flex-grow: 0;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    width: 325px;
+    margin-right: 105px;
+    margin-left: auto;
   }
 }

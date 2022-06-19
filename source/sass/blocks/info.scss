@@ -1,0 +1,17 @@
+.info {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    height: 2px;
+    max-width: 291px;
+    background-color: $color-yellow2;
+  }
+
+  &__name {
+    margin-bottom: 50px;
+  }
+}

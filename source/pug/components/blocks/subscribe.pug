@@ -3,8 +3,10 @@ mixin subscribe()
   section.subscribe&attributes(attributes)
     .container
       .subscribe__wrapper
-        .subscribe__title
-          h2.title.title--lg Получите подробное разъяснение расчётной процедуры бесплатно!
-          p Подпишитесь на рассылку, и файл придет на указанный адрес электронной почты
+        .subscribe__name
+          h2.title.title--lg.subscribe__title
+            | Получите подробное разъяснение расчётной процедуры&nbsp;
+            span бесплатно!
+          p Подпишитесь на рассылку, и файл придет на&nbsp;указанный&nbsp;адрес электронной почты
         .subscribe__form
           +subscribe-form()
